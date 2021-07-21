@@ -1,22 +1,22 @@
 """Functions for common math operations."""
+from functools import reduce
 
-
-def add(num1, num2):
+def add(num_array):
     """Return the sum of the two inputs."""
-    return num1+num2
+    return reduce(lambda x, y: x+y, num_array)
 
-
-def subtract(num1, num2):
+def subtract(num_array):
     """Return the second number subtracted from the first."""
-    return num1-num2
+    return reduce(lambda x, y: x-y, num_array)
 
-def multiply(num1, num2):
+def multiply(num_array):
     """Multiply the two inputs together."""
-    return num1*num2
+    return reduce(lambda x, y: x*y, num_array)
 
-def divide(num1, num2):
+def divide(num_array):
     """Divide the first input by the second and return the result."""
-    return num1/num2
+    return reduce(lambda x, y: x/y, num_array)
+
 
 def square(num1):
     """Return the square of the input."""
